@@ -1,38 +1,374 @@
-.App {
+body {
+  background-color: #ffffff; 
+  animation: backgroundAnimation 5s infinite;
+}
+
+@keyframes backgroundAnimation {
+  0% {
+      background-color: #ffffff; 
+  }
+  25% {
+      background-color: #ffcccc; 
+  }
+  50% {
+      background-color: #ffffcc; 
+  }
+  75% {
+      background-color: #ccffcc; 
+  }
+  100% {
+      background-color: #ffffff; 
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.back-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #50a281;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s, color 0.2s;
+}
+
+.back-btn:hover {
+  background-color: #3d5f6c;
+  transform: scale(1.05);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.container-add {
+  padding: 30px;
+  background-color: #f7f7f7;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.heading-add {
+  font-size: 24px;
+  color: #333;
+}
+
+.form-group {
+  margin: 15px 0;
+}
+
+label {
+  font-weight: bold;
+  color: #555;
+}
+
+input[type="text"],
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #333;
+}
+
+.btn-area {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.error-message {
+  color: red;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.btn {
+  background: linear-gradient(45deg, #449c63, #3d5f6c);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: linear-gradient(45deg, #3d5f6c, #5a3f7e);
+}
+
+textarea {
+  resize: vertical;
+}
+
+.top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.error-message {
+  color: red;
+}
+
+.container-list {
+  padding: 30px;
+}
+
+.heading-list {
+  font-size: 24px;
+}
+
+
+.container-list {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.bloglist {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.bloglist th, .bloglist td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+.bloglist th {
+  background-color: #f0f0f0;
+}
+
+.bloglist th:first-child,
+.bloglist td:first-child {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.bloglist tr:hover {
+  background-color: #f0f0f0;
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.link {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.list-content {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.icon-container {
+  margin-right: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.edit-icon,
+.delete-icon {
+  color: transparent;
+  transition: color 0.3s;
+  cursor: pointer;
+}
+
+.bloglist tr:hover .edit-icon {
+  color: #007bff;
+}
+
+.bloglist tr:hover .delete-icon {
+  color: #ff0000;
+}
+
+/* .container-list {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.bloglist {
+  list-style-type: none;
+  padding: 0;
+}
+
+.bloglist li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  padding: 10px;
+  transition: background-color 0.3s;
+}
+
+.bloglist li:hover {
+  background-color: #f0f0f0; 
+}
+
+.bloglist .link {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.list-content {
+  display: flex;
+  align-items: center;
+}
+
+.icon-container {
+  margin-right: 10px;
+}
+
+.edit-icon,
+.delete-icon {
+  color: transparent;
+  transition: color 0.3s;
+  cursor: pointer;
+}
+
+.bloglist li:hover .edit-icon {
+  color: #007bff; 
+}
+
+.bloglist li:hover .delete-icon {
+  color: #ff0000; 
+} */
+
+.container-add {
+  width: 600px; 
+  max-width: 100%;
+  margin: 0 auto;
+  background-color: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  border-radius: 8px;
+  transition: width 0.3s, box-shadow 0.3s;
+}
+
+.container-add:hover {
+  width: 800px; 
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); 
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.heading-add {
+  font-size: 24px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.btn-area {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.btn {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.error-message {
+  color: red;
+}
+:root {
+  --bg-gradient-start: #518c58;
+  --bg-gradient-end: #3d5f6c;
+}
+
+.category {
+  background: var(--bg-gradient-start);
+  color: #fff;
+  padding: 6px;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+.liked {
+  color: blue;
+}
+
+span {
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+span:hover {
+  color: #ff5733;
+}
+
+.back-btn {
+  background: var(--bg-gradient-start);
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.back-btn:hover {
+  background: var(--bg-gradient-end);
+}
+
+.navbar {
+  background: linear-gradient(45deg, #497a50, #3d5f6c); 
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); 
+  transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
+}
+
+.navbar-brand {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-item {
+  margin-right: 20px;
+}
+
+.btn {
+  background-color: #d9465c;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover {
+  background-color: #3d5f6c;
+  color: #fff;
+  transform: scale(1.05); 
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); 
 }
